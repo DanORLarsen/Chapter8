@@ -62,9 +62,15 @@ public class Chapter8Opgaver {
             };
             System.out.println(sumEmployee[0][0]);
 
-
-
-
+            int[] lowToHighEmployee = {sumColumnInt(eHours,0),
+                    sumColumnInt(eHours,1),sumColumnInt(eHours,2),
+                    sumColumnInt(eHours,3),sumColumnInt(eHours,4),
+                    sumColumnInt(eHours,5), sumColumnInt(eHours,6),
+                    sumColumnInt(eHours,7)};
+            Arrays.sort(lowToHighEmployee);
+            //So now Employee 0's total hours are  = sumEmployee[0][0] and 1's is sumEmployee[1][0]
+            //And right above i've sorted so i can use if to Display the correct employee with the correct hour number.
+            //in low to high "var++" or high to low if i use "var--"
 
         }
 
@@ -95,7 +101,7 @@ public class Chapter8Opgaver {
         for (int j = 0; j < m[columnIndex].length;j++)
         {total += m[columnIndex][j];
         }
-        System.out.println("The total of column " + columnIndex + " is " + total);
+        //System.out.println("The total of column " + columnIndex + " is " + total);
         return total;
     }
 }
