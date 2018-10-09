@@ -38,6 +38,9 @@ for (int i = 0; i < array.length; i++)
     System.out.println(m1(array)[0]);
     System.out.println(m1(array)[1]);}
 
+        if (pick == 4)
+        {}
+
 
 }
     public static int[] m1(int[][] m) {
