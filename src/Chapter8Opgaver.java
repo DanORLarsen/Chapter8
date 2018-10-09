@@ -71,6 +71,18 @@ public class Chapter8Opgaver {
             //So now Employee 0's total hours are  = sumEmployee[0][0] and 1's is sumEmployee[1][0]
             //And right above i've sorted so i can use if to Display the correct employee with the correct hour number.
             //in low to high "var++" or high to low if i use "var--"
+            for (int var = (lowToHighEmployee.length-1); var >-1;var--)
+            { for (int k = 0; k < lowToHighEmployee.length;k++) {
+                int counter = 0;
+                if (lowToHighEmployee[var]==sumEmployee[k][0])
+                {
+                System.out.print(employees[k]);
+                }
+
+            }
+                System.out.println(" worked " + lowToHighEmployee[var] + " hours this week");
+            }
+
 
         }
 
