@@ -60,7 +60,7 @@ public class Chapter8Opgaver {
                     {sumColumnInt(eHours,6)},
                     {sumColumnInt(eHours,7)},
             };
-            System.out.println(sumEmployee[0][0]);
+
 
             int[] lowToHighEmployee = {sumColumnInt(eHours,0),
                     sumColumnInt(eHours,1),sumColumnInt(eHours,2),
@@ -89,7 +89,7 @@ public class Chapter8Opgaver {
         }
         //OPG 8.28
         //Make a method that says if a double array is strictly identical. or not.
-        if (pick == 28);
+        if (pick == 28)
         {
             //Creating array
             int[][] m1 = new int[3][3];
@@ -113,7 +113,7 @@ public class Chapter8Opgaver {
 //Method slot
 
     //If you only want the output and dont need to work with output after.
-    public static void sumColumnDan(double[][] m)
+    private static void sumColumnDan(double[][] m)
     {for (int k = 0; k < m.length;k++)
     {double total = 0;
     for (int j = 0; j < m[k].length;j++)
@@ -122,7 +122,7 @@ public class Chapter8Opgaver {
         System.out.println("The total of column " + k + " is " + total);
     }
 } //Outputs for a double
-    public static double sumColumn(double[][] m, int columnIndex)
+    private static double sumColumn(double[][] m, int columnIndex)
     {double total = 0;
         for (int j = 0; j < m[columnIndex].length;j++)
         {total += m[columnIndex][j];
@@ -130,7 +130,7 @@ public class Chapter8Opgaver {
         System.out.println("The total of column " + columnIndex + " is " + total);
         return total;
 } //Outputs for an int
-    public static int sumColumnInt(int[][] m, int columnIndex)
+    private static int sumColumnInt(int[][] m, int columnIndex)
     {int total = 0;
         for (int j = 0; j < m[columnIndex].length;j++)
         {total += m[columnIndex][j];
@@ -139,7 +139,7 @@ public class Chapter8Opgaver {
         return total;
     }
 //Equals method, could easily become method for "contains same numbers" with a sort call first and then checking.
-    public static boolean equals(int[][] array1, int[][] array2) {
+    private static boolean equals(int[][] array1, int[][] array2) {
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
                 if (array1[i][j] != array2[i][j])
