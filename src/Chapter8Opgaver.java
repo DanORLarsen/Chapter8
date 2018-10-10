@@ -78,6 +78,7 @@ public class Chapter8Opgaver {
                 if (lowToHighEmployee[var]==sumEmployee[k][0]&& counter != 1)
                 {
                 System.out.print(employees[k]);
+                counter++;
                 }
 
             }
@@ -88,7 +89,9 @@ public class Chapter8Opgaver {
         }
         //OPG 8.5
         if (pick == 5);
+        {
 
+        }
 
 
     }
