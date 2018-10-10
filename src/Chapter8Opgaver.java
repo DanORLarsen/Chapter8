@@ -75,7 +75,7 @@ public class Chapter8Opgaver {
             {
                 int counter = 0;
             for (int k = 0; k < lowToHighEmployee.length;k++) {
-                //Runtime error, since var does go below 0. (Outside the array) HelpFix
+                //Runtime error, since var does go below 0. (Outside the array) HelpFix.
                 if (lowToHighEmployee[var]==sumEmployee[k][0]&&  lowToHighEmployee[var] != lowToHighEmployee[var-1])
                 {
                     if (counter==1)
