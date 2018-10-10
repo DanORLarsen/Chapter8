@@ -42,7 +42,7 @@ public class Chapter8Opgaver {
                     "Employee 5","Employee 6","Employee 7"};
             int[][] eHours = {
                     {2,4,3,4,5,8,8},
-                    {7,3,4,3,3,3,4},
+                    {7,3,4,3,3,4,4},
                     {3,3,4,3,3,2,2},
                     {9,3,4,7,3,4,1},
                     {3,5,4,3,6,3,8},
@@ -75,13 +75,19 @@ public class Chapter8Opgaver {
             {
                 int counter = 0;
             for (int k = 0; k < lowToHighEmployee.length;k++) {
-                if (lowToHighEmployee[var]==sumEmployee[k][0]&& counter != 1)
+                //Runtime error, since var does go below 0. (Outside the array) HelpFix
+                if (lowToHighEmployee[var]==sumEmployee[k][0]&&  lowToHighEmployee[var] != lowToHighEmployee[var-1])
                 {
+                    if (counter==1)
+                {
+                    System.out.print(" and ");
+                }
                 System.out.print(employees[k]);
                 counter++;
                 }
 
             }
+              if (counter!=0)
                 System.out.println(" worked " + lowToHighEmployee[var] + " hours this week");
             }
 
