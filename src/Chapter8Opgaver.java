@@ -38,11 +38,11 @@ public class Chapter8Opgaver {
         //Write a program that displays employees and their total hours in decreasing order of the total hours.
         if (pick == 4)
         {
-            String[] employees = {"Employee 0","Employee 1 ","Employee 2","Employee 3","Employee 4",
+            String[] employees = {"Employee 0","Employee 1","Employee 2","Employee 3","Employee 4",
                     "Employee 5","Employee 6","Employee 7"};
             int[][] eHours = {
                     {2,4,3,4,5,8,8},
-                    {7,3,4,3,3,4,4},
+                    {7,3,4,3,3,3,4},
                     {3,3,4,3,3,2,2},
                     {9,3,4,7,3,4,1},
                     {3,5,4,3,6,3,8},
@@ -72,9 +72,10 @@ public class Chapter8Opgaver {
             //And right above i've sorted so i can use if to Display the correct employee with the correct hour number.
             //in low to high "var++" or high to low if i use "var--"
             for (int var = (lowToHighEmployee.length-1); var >-1;var--)
-            { for (int k = 0; k < lowToHighEmployee.length;k++) {
+            {
                 int counter = 0;
-                if (lowToHighEmployee[var]==sumEmployee[k][0])
+            for (int k = 0; k < lowToHighEmployee.length;k++) {
+                if (lowToHighEmployee[var]==sumEmployee[k][0]&& counter != 1)
                 {
                 System.out.print(employees[k]);
                 }
