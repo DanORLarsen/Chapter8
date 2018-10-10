@@ -87,15 +87,32 @@ public class Chapter8Opgaver {
 
 
         }
-        //OPG 8.5
-        if (pick == 5);
+        //OPG 8.28
+        //Make a method that says if a double array is strictly identical. or not.
+        if (pick == 28);
         {
+            //Creating array
+            int[][] m1 = new int[3][3];
+            System.out.println("Enter " + m1.length + " rows and " +  m1[0].length + " columns: ");
+            for (int row = 0; row < m1.length; row++) {
+                for (int column = 0; column < m1[row].length; column++) {
+                    m1[row][column] = sc.nextInt();   } }
+            //Creating another array
+            int[][] m2 = new int[3][3];
+            System.out.println("Enter " + m2.length + " rows and " +  m2[0].length + " columns: ");
+            for (int row = 0; row < m2.length; row++) {
+                for (int column = 0; column < m2[row].length; column++) {
+                    m2[row][column] = sc.nextInt();   } }
+            //Calling my equals and displaying it along with text
+            System.out.println("They are strictly identical = " + equals(m1,m2));
 
         }
 
 
     }
 //Method slot
+
+    //If you only want the output and dont need to work with output after.
     public static void sumColumnDan(double[][] m)
     {for (int k = 0; k < m.length;k++)
     {double total = 0;
@@ -104,7 +121,7 @@ public class Chapter8Opgaver {
     }
         System.out.println("The total of column " + k + " is " + total);
     }
-}
+} //Outputs for a double
     public static double sumColumn(double[][] m, int columnIndex)
     {double total = 0;
         for (int j = 0; j < m[columnIndex].length;j++)
@@ -112,7 +129,7 @@ public class Chapter8Opgaver {
         }
         System.out.println("The total of column " + columnIndex + " is " + total);
         return total;
-}
+} //Outputs for an int
     public static int sumColumnInt(int[][] m, int columnIndex)
     {int total = 0;
         for (int j = 0; j < m[columnIndex].length;j++)
@@ -121,4 +138,15 @@ public class Chapter8Opgaver {
         //System.out.println("The total of column " + columnIndex + " is " + total);
         return total;
     }
+//Equals method, could easily become method for "contains same numbers" with a sort call first and then checking.
+    public static boolean equals(int[][] array1, int[][] array2) {
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                if (array1[i][j] != array2[i][j])
+                    return false;
+            }
+        }
+        return true;
+    }
+
 }
