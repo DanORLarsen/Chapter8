@@ -1,6 +1,5 @@
+import java.util.Arrays;
 import java.util.Scanner;
-import java.lang.*;
-import java.util.*;
 
 public class Chapter8Opgaver {
     public static void main(String[] args) {
@@ -76,16 +75,23 @@ public class Chapter8Opgaver {
                 int counter = 0;
             for (int k = 0; k < lowToHighEmployee.length;k++) {
                 //Runtime error, since var does go below 0. (Outside the array) HelpFix.
-                if (lowToHighEmployee[var]==sumEmployee[k][0]&&  lowToHighEmployee[var] != lowToHighEmployee[var-1])
-                {
-                    if (counter==1)
-                {
-                    System.out.print(" and ");
-                }
-                System.out.print(employees[k]);
-                counter++;
-                }
+                //FIXED RUNTIME ERROR!!!!!
 
+                if (lowToHighEmployee[var]==sumEmployee[k][0]) {
+                    if (var != 0){
+                    if (lowToHighEmployee[var] != lowToHighEmployee[var - 1]) {
+                        if (counter == 1) {
+                            System.out.print(" and ");
+                        }
+                        System.out.print(employees[k]);
+                        counter++;
+                    }
+                    else if(var == 0) {if (counter == 1) {
+                        System.out.print(" and ");
+                    }
+                        System.out.print(employees[k]);
+                        counter++;}}
+                }
             }
               if (counter!=0)
                 System.out.println(" worked " + lowToHighEmployee[var] + " hours this week");
