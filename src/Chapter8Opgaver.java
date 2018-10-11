@@ -97,7 +97,6 @@ public class Chapter8Opgaver {
                 System.out.println(" worked " + lowToHighEmployee[var] + " hours this week");
             }
 
-
         }
         //OPG 8.28
         //Make a method that says if a double array is strictly identical. or not.
