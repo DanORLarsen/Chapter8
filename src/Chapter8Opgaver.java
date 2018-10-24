@@ -20,7 +20,8 @@ public class Chapter8Opgaver {
                 sumColumn(matrix,0);
             sumColumn(matrix,1);
             sumColumn(matrix,2);
-
+            //You can use the sum afterwards with the method above.
+//The Exercise on requires you to display and not use it, so it can be made with a print out statement in the method as below in "sumColumnDan"
         }
         if (pick == 1.5)
         {double[][] matrix = new double[3][4];
@@ -119,7 +120,8 @@ public class Chapter8Opgaver {
 
         }
 
-
+else
+        { System.out.println("☠☣ Invalid input ☣☠");}
     }
 //Method slot
 
