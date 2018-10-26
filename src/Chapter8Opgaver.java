@@ -37,7 +37,7 @@ public class Chapter8Opgaver {
         //Opg 8.4
         //Write a program that displays employees and their total hours in decreasing order of the total hours.
         if (pick == 4)
-        {
+        {//Using array to store Employees, and a mutli array to store hours
             String[] employees = {"Employee 0","Employee 1","Employee 2","Employee 3","Employee 4",
                     "Employee 5","Employee 6","Employee 7"};
             int[][] eHours = {
@@ -61,7 +61,7 @@ public class Chapter8Opgaver {
                     {sumColumnInt(eHours,7)},
             };
 
-
+//Using the Sum and putting it in a single array to utilze Arrrays own sorting method
             int[] lowToHighEmployee = {sumColumnInt(eHours,0),
                     sumColumnInt(eHours,1),sumColumnInt(eHours,2),
                     sumColumnInt(eHours,3),sumColumnInt(eHours,4),
@@ -75,8 +75,8 @@ public class Chapter8Opgaver {
             {
                 int counter = 0;
             for (int k = 0; k < lowToHighEmployee.length;k++) {
-                //Runtime error, since var does go below 0. (Outside the array) HelpFix.
-                //FIXED RUNTIME ERROR!!!!!
+                //Now im using loops to print out employee and hours in highest to lowest.
+                //Im also adding if + a counter to add a and if theres too with same hours
 
                 if (lowToHighEmployee[var]==sumEmployee[k][0]) {
                     if (var != 0){
